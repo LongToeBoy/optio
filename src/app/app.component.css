@@ -1,0 +1,9 @@
+app-dashboard-body{
+    padding:1vw;
+    width: 90%;
+}
+
+.container-fluid{
+    display: inline-flex;
+    padding:0;
+}

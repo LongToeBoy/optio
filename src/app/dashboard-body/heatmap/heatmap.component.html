@@ -1,0 +1,11 @@
+<div style="display: grid;">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin:auto">
+    <label class="btn btn-secondary active">
+      <input type="radio" name="options" id="option1" checked (click)="setOption(0)"> თანხის მოცულობა
+    </label>
+    <label class="btn btn-secondary">
+      <input type="radio" name="options" id="option2" (click)="setOption(1)"> ტრაზაქციების რაოდენობა
+    </label>
+</div>
+<div class="demo-chart" echarts id="heatMapDom"  style="margin:auto; display: block; width: 90vw; height: 100vh;"></div>
+</div>

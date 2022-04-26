@@ -1,0 +1,37 @@
+
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li ngbNavItem>
+      <a ngbNavLink ngbTooltip="ხარჯების კატეგორიები და განაწილება" >
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="!donutOptions"></span>  
+        Doughnut</a>
+      <ng-template ngbNavContent>
+        <app-donut [chartOptions]="donutOptions" *ngIf="donutOptions"></app-donut>
+      </ng-template>
+    </li>
+    <li ngbNavItem>
+      <a ngbNavLink ngbTooltip="ხარჯვის ინტენსივობა დღეების მიხედვით" >
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="!heatmapOptions"></span>  
+        Heatmap</a>
+      <ng-template ngbNavContent>
+        <app-heatmap [chartOptions]="heatmapOptions" *ngIf="heatmapOptions"></app-heatmap>
+      </ng-template>
+    </li>
+    <li ngbNavItem>
+        <a ngbNavLink ngbTooltip="შემოსავლების კატეგორიები თარიღების მიხედვით">
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="linechartOptions"></span>    
+        Linechart</a>
+        <ng-template ngbNavContent>
+          <app-linechart *ngIf="linechartOptions"></app-linechart>
+        </ng-template>
+      </li>
+      <li ngbNavItem>
+        <a ngbNavLink ngbTooltip="ცხრილი - პოპულარული მერჩანტები" >
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="tableOptions"></span>  
+        Table</a>
+        <ng-template ngbNavContent>
+          <app-table *ngIf="tableOptions"></app-table>
+        </ng-template>
+      </li>
+  </ul>
+  
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
